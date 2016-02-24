@@ -1,0 +1,3 @@
+[12-Feb-2016 13:20:49 Pacific/Auckland] PHP Warning:  include(libraries/Mailchimp.php): failed to open stream: No such file or directory in /home/beshadghorbani/public_html/_Assignments/WE04/public_html/alertt_website/emails.php on line 2
+[12-Feb-2016 13:20:49 Pacific/Auckland] PHP Warning:  include(): Failed opening 'libraries/Mailchimp.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/beshadghorbani/public_html/_Assignments/WE04/public_html/alertt_website/emails.php on line 2
+[12-Feb-2016 13:20:49 Pacific/Auckland] PHP Fatal error:  Class 'DrewM\MailChimp\MailChimp' not found in /home/beshadghorbani/public_html/_Assignments/WE04/public_html/alertt_website/emails.php on line 4

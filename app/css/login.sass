@@ -1,0 +1,35 @@
+.login-page
+  width: $screen-width
+  height: $screen-height
+  background: url("../images/bkg.jpg") no-repeat
+  background-size: 100%
+
+.login-page__logo
+  margin-top: $screen-height / 2
+  margin-left: $screen-width / 5
+  animation-duration: 1s
+
+.mdl-layout--login
+  margin-top: $screen-height /5
+  margin-left: $screen-width / 5
+  animation-duration: 1s
+
+.mdl-card--login
+  width: 350px
+
+.hide
+  display: none
+
+.mdl-card__login
+  width: 300px
+  height: 40px
+  font-size: 2em
+
+
+$social-colours: $facebook $google $windows $twitter
+@for $i from 1 through length($social-colours)
+  .mdl-card__#{$i}
+    background-color: nth($social-colours,$i)
+    width: 80px
+    height: 80px
+
