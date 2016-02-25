@@ -22,7 +22,7 @@ $(document).ready(function () {
     $("#login-form__submit").click(function () {
         var email = $("#email").val();
         var password = $("#password").val();
-        $.post('https://alertt-beshad.c9users.io/alertt_server/auth.php', {email: email, password: password});
+        $.post('../server/auth.php', {email: email, password: password});
     });
 
     // loading up the map and setting up the geolocation + map center + marker

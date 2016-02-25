@@ -2,7 +2,7 @@
 //auth/loging ajax class. this class register and store user email + password
 
 
-header('Access-Control-Allow-Origin: https://alertt-beshad.c9users.io/alertt/app/login.html');
+header('Access-Control-Allow-Origin: app/login.html');
 
 class Auth
 {
