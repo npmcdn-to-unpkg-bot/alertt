@@ -57,7 +57,7 @@ $(document).ready(function () {
 
                     //--------------------------------------------------------------------------------
                     $.ajax({
-                        url: 'https://alertt-beshad.c9users.io/alertt/server/mapmarker.php',
+                        url: '../server/mapmarker.php',
                         dataType: 'json',
                         success: function (data) {
                             for (var i = 0; i < data.length; i++) {
@@ -107,7 +107,7 @@ $(document).ready(function () {
                 var hazard = hazards[i].value;
             }
         }
-        $.post('https://alertt-beshad.c9users.io/alertt/server/map.php', {hazard: hazard, comment: comment, lat: lat, lng: lng});
+        $.post('/server/map.php', {hazard: hazard, comment: comment, lat: lat, lng: lng});
     });
 
     //  this is the material desing lite  pop up menu
@@ -136,7 +136,7 @@ hello.init({
     google: "555926502433-77d4pg1pvd1tv3dpsu8hapdi5vt6jf0j.apps.googleusercontent.com",
     twitter: "kr2qYZWQDxt1LxEWhQPpw7gbI"
 }, {
-    redirect_uri: 'login.html',
+    redirect_uri: 'map.html',
     //oauth_proxy: "https://auth-server.herokuapp.com/proxy",
     scope: 'email'
 });
@@ -146,7 +146,7 @@ hello.init({
             var session = hello('facebook').getAuthResponse();
             var email = json.email;
             var token = session.access_token;
-            $.post('https://alertt-beshad.c9users.io/alertt/server/auth.php', {email: email, auth: token});
+            $.post('../server/auth.php', {email: email, auth: token});
         });
     });
 
@@ -155,7 +155,7 @@ hello.init({
             var session = hello('google').getAuthResponse();
             var email = json.email;
             var token = session.access_token;
-            $.post('https://alertt-beshad.c9users.io/alertt/server/auth.php', {email: email, auth: token});
+            $.post('../server/auth.php', {email: email, auth: token});
         });
     });
 
@@ -164,7 +164,7 @@ hello.init({
             var session = hello('windows').getAuthResponse();
             var email = json.email;
             var token = session.access_token;
-            $.post('https://alertt-beshad.c9users.io/alertt/server/auth.php', {email: email, auth: token});
+            $.post('../server/auth.php', {email: email, auth: token});
         });
     });
 
@@ -173,7 +173,7 @@ hello.init({
             var session = hello('twitter').getAuthResponse();
             var email = json.name; //twitter does not give users email address via their api
             var token = session.access_token;
-            $.post('https://alertt-beshad.c9users.io/alertt/server/auth.php', {email: email, auth: token});
+            $.post('../server/auth.php', {email: email, auth: token});
         });
     });
 

@@ -1,12 +1,12 @@
 <?php
 
-header('Access-Control-Allow-Origin: https://alertt-beshad.c9users.io/alertt/app/map.html');
+header('Access-Control-Allow-Origin: https://alertt/app/map.html');
 
 class Mapmarker
 {
     public function connectDB($sql)
     {
-        $conn = new mysqli("localhost","beshad","","alertt");
+        $conn = new mysqli("localhost","root","root","alertt_db");
         $result = $conn->query($sql);
         $conn->close();
         return $result;
